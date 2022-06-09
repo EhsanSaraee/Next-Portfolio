@@ -1,3 +1,4 @@
+import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import Head from 'next/head';
 
@@ -10,6 +11,7 @@ const Home = () => {
             <link rel="icon" href="/assets/Logo_6.png" />
          </Head>
          <Navbar />
+         <Hero />
       </>
    );
 };

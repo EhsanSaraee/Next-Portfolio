@@ -1,3 +1,4 @@
+import About from '@/components/About';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import Head from 'next/head';
@@ -12,6 +13,7 @@ const Home = () => {
          </Head>
          <Navbar />
          <Hero />
+         <About />
       </>
    );
 };

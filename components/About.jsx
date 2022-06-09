@@ -26,7 +26,7 @@ const About = () => {
                </p>
                <Link href="/#projects">
                   <p className="py-2 underline cursor-pointer text-[#5651e5]">
-                     Check out some of my latest projects.
+                     Check out some of my best projects.
                   </p>
                </Link>
             </div>

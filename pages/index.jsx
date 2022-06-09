@@ -1,6 +1,4 @@
-import About from '@/components/About';
-import Hero from '@/components/Hero';
-import Navbar from '@/components/Navbar';
+import { About, Hero, Navbar, Skills } from '@/components';
 import Head from 'next/head';
 
 const Home = () => {
@@ -14,6 +12,7 @@ const Home = () => {
          <Navbar />
          <Hero />
          <About />
+         <Skills />
       </>
    );
 };

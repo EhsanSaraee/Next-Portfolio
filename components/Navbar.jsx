@@ -19,8 +19,8 @@ const Navbar = () => {
             <Image
                src="/assets/Logo_8.png"
                alt="Logo"
-               width={110}
-               height={70}
+               width={120}
+               height={80}
                objectFit="contain"
                quality={100}
             />

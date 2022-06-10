@@ -4,7 +4,7 @@ const Skills = () => {
    return (
       <section className="w-full lg:h-screen p-2">
          <div className="max-w-[1240px] flex flex-col mx-auto h-full justify-center">
-            <p className="text-xl uppercase text-[#5156e5] tracking-widest">
+            <p className="text-xl font-bold uppercase text-[#5156e5] tracking-widest">
                Skills
             </p>
             <h2 className="py-4">What I Can Do</h2>

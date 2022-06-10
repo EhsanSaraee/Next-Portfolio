@@ -5,12 +5,14 @@ const About = () => {
       <section className="w-full md:h-screen p-2 flex items-center py-16">
          <section className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
             <div className="col-span-2 mb-4">
-               <p>About</p>
-               <h2 className="mb-8">Who I Am</h2>
+               <p className="text-xl font-bold uppercase text-[#5156e5] tracking-widest mb-2">
+                  About
+               </p>
+               <h2 className="mb-6">Who I Am</h2>
                <p className="py-2 text-gray-600">
                   My name is Ehsan, live in Iran/Mashhad, a self-taught
-                  front-end web developer. Currently I&apos;m 24 and I start
-                  learning programming from 23 with HTML & CSS That&apos;s where
+                  front-end web developer. Currently I&apos;m 24 and I started
+                  learning programming when I was 23 with HTML & CSS That&apos;s where
                   I made my first static web app.
                </p>
                <p className="py-2 text-gray-600">

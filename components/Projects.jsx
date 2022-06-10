@@ -10,7 +10,7 @@ import RealEstate from '../public/assets/projects/Real-Estate.png';
 
 const Projects = () => {
    return (
-      <section className="w-full">
+      <section id='projects' className="w-full">
          <section className="max-w-[1240px] px-2 py-16 mx-auto">
             <p className="text-xl tracking-widest uppercase text-[#5651e5] font-bold">
                Projects

@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const About = () => {
    return (
-      <section className="w-full md:h-screen p-2 flex items-center py-16">
+      <section id='about' className="w-full md:h-screen p-2 flex items-center py-16">
          <section className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
             <div className="col-span-2 mb-4">
                <p className="text-xl font-bold uppercase text-[#5156e5] tracking-widest mb-2">

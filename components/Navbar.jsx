@@ -1,28 +1,50 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import HeaderLinks from './HeaderLinks';
 import MobileLinks from './MobileLinks';
+import Link from 'next/link';
 
 const Navbar = () => {
    const [nav, setNav] = useState(false);
+   const [shadow, setShadow] = useState(false);
 
    const handleNav = () => {
       setNav((prevNav) => !prevNav);
    };
 
+   useEffect(() => {
+      const handleShadow = () => {
+         if (window.scrollY >= 80) {
+            setShadow(true);
+         } else {
+            setShadow(false);
+         }
+      };
+      window.addEventListener('scroll', handleShadow);
+   }, []);
+
    return (
-      <section className="fixed w-full h-20 shadow-xl z-[100] bg-[#ecf0f3]">
+      <section
+         className={
+            shadow
+               ? 'fixed w-full h-20 shadow-xl z-[100] bg-[#ecf0f3]'
+               : 'fixed w-full h-20 z-[100] bg-[#ecf0f3]'
+         }
+      >
          <section className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-            <Image
-               src="/assets/Logo_8.png"
-               alt="Logo"
-               width={120}
-               height={80}
-               objectFit="contain"
-               quality={100}
-            />
+            <Link href="/">
+               <Image
+                  src="/assets/Logo_8.png"
+                  alt="Logo"
+                  width={120}
+                  height={80}
+                  objectFit="contain"
+                  quality={100}
+                  className="cursor-pointer"
+               />
+            </Link>
             <nav>
                <HeaderLinks />
                <div onClick={handleNav} className="md:hidden">

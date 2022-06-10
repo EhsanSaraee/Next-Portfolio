@@ -1,4 +1,4 @@
-import { About, Hero, Navbar, Skills, Projects } from '@/components';
+import { About, Hero, Navbar, Skills, Projects, Contact } from '@/components';
 import Head from 'next/head';
 
 const Home = () => {
@@ -14,6 +14,7 @@ const Home = () => {
          <About />
          <Skills />
          <Projects />
+         <Contact />
       </>
    );
 };

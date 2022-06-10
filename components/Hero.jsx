@@ -1,6 +1,5 @@
 import { AiOutlineMail } from 'react-icons/ai';
-import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa';
 
 const Hero = () => {
    return (
@@ -22,16 +21,16 @@ const Hero = () => {
                </p>
                <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
                   <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
-                     <FaLinkedinIn size={22} />
+                     <FaLinkedinIn size={20} />
                   </div>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
-                     <FaGithub size={22} />
+                     <FaGithub size={20} />
                   </div>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
-                     <AiOutlineMail size={22} />
+                     <AiOutlineMail size={20} />
                   </div>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
-                     <BsFillPersonLinesFill size={22} />
+                  <FaWhatsapp size={20} />
                   </div>
                </div>
             </div>

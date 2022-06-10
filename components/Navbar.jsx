@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
-import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
+import { FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import HeaderLinks from './HeaderLinks';
 import MobileLinks from './MobileLinks';
 
@@ -76,16 +75,16 @@ const Navbar = () => {
                      </p>
                      <div className="flex justify-between items-center my-4 w-full sm:w-[80%]">
                         <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                           <FaLinkedinIn />
+                           <FaLinkedinIn size={20} />
                         </div>
                         <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                           <FaGithub />
+                           <FaGithub size={20} />
                         </div>
                         <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                           <AiOutlineMail />
+                           <AiOutlineMail size={20} />
                         </div>
                         <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                           <BsFillPersonLinesFill />
+                           <FaWhatsapp size={20} />
                         </div>
                      </div>
                   </section>

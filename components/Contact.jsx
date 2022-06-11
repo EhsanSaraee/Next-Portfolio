@@ -120,7 +120,7 @@ const Contact = () => {
                               className="border-2 rounded-lg p-3 flex border-gray-300 focus:outline-none"
                            />
                         </div>
-                        <button className="w-full p-4 text-gray-100 mt-4 hover:bg-gradient-to-l ease-in duration-300">
+                        <button className="w-full p-4 text-gray-100 mt-4 hover:bg-gradient-to-l">
                            Send Message
                         </button>
                      </form>

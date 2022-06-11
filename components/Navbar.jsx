@@ -9,6 +9,7 @@ import Link from 'next/link';
 const Navbar = () => {
    const [nav, setNav] = useState(false);
    const [shadow, setShadow] = useState(false);
+   
 
    const handleNav = () => {
       setNav((prevNav) => !prevNav);
@@ -29,8 +30,8 @@ const Navbar = () => {
       <section
          className={
             shadow
-               ? 'fixed w-full h-20 shadow-xl z-[100] bg-[#ecf0f3]'
-               : 'fixed w-full h-20 z-[100] bg-[#ecf0f3]'
+               ? 'fixed w-full h-20 shadow-xl z-[100]'
+               : 'fixed w-full h-20 z-[100]'
          }
       >
          <section className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
@@ -47,7 +48,7 @@ const Navbar = () => {
             </Link>
             <nav>
                <HeaderLinks />
-               <div onClick={handleNav} className="md:hidden">
+               <div onClick={handleNav} className="md:hidden cursor-pointer">
                   <AiOutlineMenu size={25} />
                </div>
             </nav>
@@ -68,14 +69,18 @@ const Navbar = () => {
             >
                <div>
                   <section className="flex w-full items-center justify-between">
-                     <Image
-                        src="/assets/Logo_8.png"
-                        alt="Logo"
-                        width={50}
-                        height={60}
-                        quality={100}
-                        objectFit="contain"
-                     />
+                     <Link href="/">
+                        <Image
+                           src="/assets/Logo_8.png"
+                           alt="Logo"
+                           width={50}
+                           height={60}
+                           quality={100}
+                           objectFit="contain"
+                           onClick={() => setNav(false)}
+                           className="cursor-pointer"
+                        />
+                     </Link>
                      <div
                         onClick={handleNav}
                         className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
@@ -90,7 +95,7 @@ const Navbar = () => {
                   </div>
                </div>
                <nav className="py-4 flex flex-col">
-                  <MobileLinks />
+                  <MobileLinks setNav={setNav} />
                   <section className="pt-20">
                      <p className="uppercase tracking-widest text-[#5651e5]">
                         Let&apos;s Connect

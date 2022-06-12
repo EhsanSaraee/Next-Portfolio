@@ -20,17 +20,29 @@ const Hero = () => {
                   while learning ui/ux concepts.
                </p>
                <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
-                     <FaLinkedinIn size={20} />
-                  </div>
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
-                     <FaGithub size={20} />
-                  </div>
+                  <a
+                     href="https://www.linkedin.com/in/ehsan-saraee-9b8919241"
+                     target="_blank"
+                     rel="noreferrer"
+                  >
+                     <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
+                        <FaLinkedinIn size={20} />
+                     </div>
+                  </a>
+                  <a
+                     href="https://github.com/EhsanSaraee"
+                     target="_blank"
+                     rel="noreferrer"
+                  >
+                     <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
+                        <FaGithub size={20} />
+                     </div>
+                  </a>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
                      <AiOutlineMail size={20} />
                   </div>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <FaWhatsapp size={20} />
+                     <FaWhatsapp size={20} />
                   </div>
                </div>
             </div>

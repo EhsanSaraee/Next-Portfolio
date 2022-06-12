@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-const HeaderLinks = () => {
+const HeaderLinks = ({ linkColor }) => {
    return (
-      <ul className="hidden md:flex">
+      <ul style={{ color: `${linkColor}` }} className="hidden md:flex">
          <Link href="/">
             <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
          </Link>

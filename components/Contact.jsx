@@ -34,12 +34,24 @@ const Contact = () => {
                            Connect With Me
                         </p>
                         <div className="flex items-center justify-between py-4">
-                           <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                              <FaLinkedinIn size={20} />
-                           </div>
-                           <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                              <FaGithub size={20} />
-                           </div>
+                           <a
+                              target="_blank"
+                              rel="noreferrer"
+                              href="https://www.linkedin.com/in/ehsan-saraee-9b8919241"
+                           >
+                              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                                 <FaLinkedinIn size={20} />
+                              </div>
+                           </a>
+                           <a
+                              href="https://github.com/EhsanSaraee"
+                              target="_blank"
+                              rel="noreferrer"
+                           >
+                              <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                                 <FaGithub size={20} />
+                              </div>
+                           </a>
                            <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                               <AiOutlineMail size={20} />
                            </div>
@@ -52,7 +64,11 @@ const Contact = () => {
                </div>
                <section className="col-span-3 w-full h-auto shadow-xl shadow-gray-400 rounded-xl lg:p-4">
                   <div className="p-4">
-                     <form>
+                     <form
+                        action="https://getform.io/f/3beb5344-4c7c-4a79-a298-e5029b812024"
+                        method="POST"
+                        encType="multipart/form-data"
+                     >
                         <section className="grid md:grid-cols-2 gap-4 py-2 w-full">
                            <div className="flex flex-col">
                               <label
@@ -75,7 +91,7 @@ const Contact = () => {
                                  Phone Number
                               </label>
                               <input
-                                 type="text"
+                                 type="number"
                                  name="phoneNumber"
                                  className="border-2 rounded-lg p-3 flex border-gray-300 focus:outline-none"
                               />
@@ -128,7 +144,7 @@ const Contact = () => {
                </section>
             </div>
             <section className="flex justify-center py-12">
-               <Link href="/">
+               <Link href="/" passHref>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
                      <HiOutlineChevronDoubleUp
                         className="text-[#5651e5]"

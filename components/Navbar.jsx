@@ -5,11 +5,32 @@ import { FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import HeaderLinks from './HeaderLinks';
 import MobileLinks from './MobileLinks';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
    const [nav, setNav] = useState(false);
    const [shadow, setShadow] = useState(false);
-   
+   const [navBg, setNavBg] = useState('#ecf0f3');
+   const [linkColor, setLinkColor] = useState('#1f2937');
+   const router = useRouter();
+
+   useEffect(() => {
+      if (
+         router.asPath === '/portfolio' ||
+         router.asPath === '/gpt-3' ||
+         router.asPath === '/griffin-tech' ||
+         router.asPath === '/travelya' ||
+         router.asPath === '/starbucks' ||
+         router.asPath === '/comfy-sloth-store' ||
+         router.asPath === '/real-estate'
+      ) {
+         setNavBg('transparent');
+         setLinkColor('#ecf0f3');
+      } else {
+         setNavBg('#ecf0f3');
+         setLinkColor('#1f2937');
+      }
+   }, [router]);
 
    const handleNav = () => {
       setNav((prevNav) => !prevNav);
@@ -28,6 +49,7 @@ const Navbar = () => {
 
    return (
       <section
+         style={{ backgroundColor: `${navBg}` }}
          className={
             shadow
                ? 'fixed w-full h-20 shadow-xl z-[100]'
@@ -47,8 +69,12 @@ const Navbar = () => {
                />
             </Link>
             <nav>
-               <HeaderLinks />
-               <div onClick={handleNav} className="md:hidden cursor-pointer">
+               <HeaderLinks linkColor={linkColor} />
+               <div
+                  style={{ color: `${linkColor}` }}
+                  onClick={handleNav}
+                  className="md:hidden cursor-pointer"
+               >
                   <AiOutlineMenu size={25} />
                </div>
             </nav>
@@ -69,7 +95,7 @@ const Navbar = () => {
             >
                <div>
                   <section className="flex w-full items-center justify-between">
-                     <Link href="/">
+                     <Link href="/" passHref>
                         <Image
                            src="/assets/Logo_8.png"
                            alt="Logo"
@@ -101,12 +127,24 @@ const Navbar = () => {
                         Let&apos;s Connect
                      </p>
                      <div className="flex justify-between items-center my-4 w-full sm:w-[80%]">
-                        <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                           <FaLinkedinIn size={20} />
-                        </div>
-                        <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                           <FaGithub size={20} />
-                        </div>
+                        <a
+                           href="https://www.linkedin.com/in/ehsan-saraee-9b8919241"
+                           target="_blank"
+                           rel="noreferrer"
+                        >
+                           <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                              <FaLinkedinIn size={20} />
+                           </div>
+                        </a>
+                        <a
+                           href="https://github.com/EhsanSaraee"
+                           target="_blank"
+                           rel="noreferrer"
+                        >
+                           <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                              <FaGithub size={20} />
+                           </div>
+                        </a>
                         <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                            <AiOutlineMail size={20} />
                         </div>

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from 'react-icons/ai';
-import { FaLinkedinIn, FaGithub, FaWhatsapp } from 'react-icons/fa';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { FaLinkedinIn, FaGithub, FaTwitter } from 'react-icons/fa';
 import HeaderLinks from './HeaderLinks';
 import MobileLinks from './MobileLinks';
 import Link from 'next/link';
@@ -145,12 +145,15 @@ const Navbar = () => {
                               <FaGithub size={20} />
                            </div>
                         </a>
-                        <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                           <AiOutlineMail size={20} />
-                        </div>
-                        <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                           <FaWhatsapp size={20} />
-                        </div>
+                        <a
+                           href="https://twitter.com/saraee_ehsan"
+                           target="_blank"
+                           rel="noreferrer"
+                        >
+                           <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                              <FaTwitter size={20} />
+                           </div>
+                        </a>
                      </div>
                   </section>
                </nav>

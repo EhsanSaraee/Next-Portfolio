@@ -35,12 +35,24 @@ const RealEstate = () => {
                      estate details. You can see the code and a live demo of the
                      project down below.
                   </p>
-                  <button className="px-8 py-2 mt-6 mr-8 hover:bg-gradient-to-l">
-                     Demo
-                  </button>
-                  <button className="px-8 py-2 mt-4 hover:bg-gradient-to-l">
-                     Code
-                  </button>
+                  <a
+                     href="https://realtor-one-gamma.vercel.app/"
+                     target="_blank"
+                     rel="noreferrer"
+                  >
+                     <button className="px-8 py-2 mt-6 mr-8 hover:bg-gradient-to-l">
+                        Demo
+                     </button>
+                  </a>
+                  <a
+                     href="https://github.com/EhsanSaraee/Estate-App"
+                     target="_blank"
+                     rel="noreferrer"
+                  >
+                     <button className="px-8 py-2 mt-4 hover:bg-gradient-to-l">
+                        Code
+                     </button>
+                  </a>
                   <Link href="/#projects" passHref>
                      <p className="cursor-pointer border-none p-1 rounded-full bg-[#61686d] text-white w-28 text-center text-xl  hover:bg-[#7a838a] ease-in duration-200 mt-32">
                         Back

@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import { AiOutlineMail } from 'react-icons/ai';
-import { FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 
 const Contact = () => {
@@ -52,12 +51,15 @@ const Contact = () => {
                                  <FaGithub size={20} />
                               </div>
                            </a>
-                           <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                              <AiOutlineMail size={20} />
-                           </div>
-                           <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                              <FaWhatsapp size={20} />
-                           </div>
+                           <a
+                              href="https://twitter.com/saraee_ehsan"
+                              target="_blank"
+                              rel="noreferrer"
+                           >
+                              <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                                 <FaTwitter size={20} />
+                              </div>
+                           </a>
                         </div>
                      </div>
                   </div>
